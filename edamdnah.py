@@ -16,7 +16,6 @@ def atack(url, dictionary):
         'security': 'low'
     }
     response = requests.get(url, params=params, cookies=cookies)
-    
     if 'incorrect' in response.text:
         return 1
     elif 'Welcome' in response.text:
